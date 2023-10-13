@@ -13,7 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $title = 'homepage';
-    return view('home', compact('title'));
-})->name('home');
+Route::get('/', [PageController::class, 'homepage'])->name('home');
